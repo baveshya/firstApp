@@ -1,8 +1,125 @@
+
 <html>
 <head>
-<title>Heading Example</title>
-</head>
 <body>
-MY FIRST SITE TO GET HOSTED 
-</body>
+<div class="container">
+<div class="pacManHead">
+
+  <div class='top'>
+    <div class='pacEye'></div>
+	</div>
+    <div class='bottom'></div>
+  </div>
+  <div class="BallHead">
+ <div class="circle c1 column"></div>
+ <div class="circle c2 column"></div>
+ <div class="circle c3 column"></div>
+ </div>
+</div> 
+<style>
+.top , .bottom {
+   transform-origin: bottom center;
+    border-radius: 50px 50px 0px 0px;
+    width: 100px;
+    height: 50px;
+    background: yellow;
+    animation:biteUp 3s ease-in-out infinite;
+}
+
+.pacEye {
+    top: 18px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    z-index: 20;
+    left: 60px;
+    border-radius: 50px;
+  
+}
+.bottom {
+  transform-origin: top center;
+     border-radius: 0px 0px 50px 50px;
+    animation:biteDown 3s ease-in-out infinite;
+}
+
+.container {
+    background:black;
+  border:10px solid blue;
+  height:350px;
+  
+}
+
+body {
+  background :black;
+}
+
+.pacManHead {
+  margin:100px 0px 0 100px;
+}
+
+@keyframes biteDown {
+
+  0% {
+    transform:rotateZ(00deg);
+  }
+    50% {
+    transform:rotateZ(30deg);
+  }
+  100%{
+    transform:rotateZ(0deg)
+  }
+}
+
+@keyframes biteUp {
+
+  0% {
+    transform:rotateZ(00deg);
+  }
+    50% {
+    transform:rotateZ(-30deg);
+  }
+  100%{
+    transform:rotateZ(0deg)
+  }
+}
+.column {
+   float: left;
+   padding: 15px;
+   
+   
+}                                  
+ .circle{
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   background-color: blue;     
+   animation: slide 5s ease-in infinite;           
+   margin-right:40px;   
+   
+}   
+.BallHead {
+  margin:-75px 0px 0 100px;
+}
+    @keyframes slide{
+    0%{
+      transform: translateX(1000px);
+      }                        
+         
+      90% {
+        opacity:1;
+        transform: translateX(100px);
+      }
+    100%{   
+      transform: translateX(0px);
+      opacity:0;
+      }
+       
+}
+                                               
+
+<style>
+<body>
+
+
 </html>
