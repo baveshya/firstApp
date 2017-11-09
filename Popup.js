@@ -21,7 +21,7 @@ class Popup extends React.Component {
             this.setState({
                 time: 'end',
                 title: 'Congratulations!',
-                buttonText: 'Done'
+                buttonText: 'End.Please close the window'
             });
             
             this.props.startQuiz();
@@ -38,7 +38,7 @@ class Popup extends React.Component {
     }
     componentWillReceiveProps(nextProps) {
         this.setState({
-            text: 'You have completed the quiz. <br /> You got: <strong>' + this.props.score + '</strong> out of <strong>' +this.props.total +'</strong> questions right.You scored'+ this.totalscore(this.props.score)+'points'
+            text: 'You have completed the quiz. <br /> You got: <strong>' + this.props.score + '</strong> out of <strong>' +this.props.total +'</strong> questions right.You scored </strong>'+ this.totalscore(this.props.score)+'</strong>points'
         })
     }
     
